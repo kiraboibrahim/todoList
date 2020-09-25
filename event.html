@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>
+			EVENTS
+		</title>
+		<script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+		<link rel="stylesheet" href="js/bootstrap-4.3.1-dist/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+		<style>
+			@font-face {
+			src: url(fonts/Comic_Nueue/ComicNeue-Regular.ttf);
+			font-size: 100%;
+			font-family: Comic;
+			}
+			@font-face {
+				src: url(fonts/Baloo_Tammudu_2/BalooTammudu2-Regular.ttf);
+				font-size: 100%;
+				font-family: Baloo;
+			}
+			body {
+				width: 100vw;
+				height: 100vh;
+				font-size: 100%;
+				font-family: Baloo, sans-serif;
+			}
+			.event-container {
+				 padding: 1em;
+				 margin: 0;
+			}
+			.headings {
+				display: flex;
+			}
+			.headings h1 {
+				margin-right: auto;
+				flex: 1 0 30%;
+				font-size: 20px;
+				font-weight: bold;
+				color: #222831;
+				border-bottom: 1px solid #ececec;
+			}
+			.event {
+				display: flex;
+				border-bottom: 1px solid #ececec;
+				margin-bottom: 1em;
+				padding: bottom: 1em;
+			}
+			.event-title h1 {
+				
+			}
+			.event div {
+				flex: 1 0 30%;
+			}
+			.event h1 {
+				 font-size: 19px;
+			}
+			
+			.actions {
+				
+			}
+			.actions button {
+				display: inline-block;
+			}
+			.event-status h1 {
+				font-weight: normal;
+				color: white;
+				font-size: 15px;
+			}
+			
+			.icon {
+				font-size: 20px;
+			}
+			
+			.icon-edit {
+				color: #007bff;
+			}
+			
+			.icon-del {
+				color: #dc3545;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class="event-container">
+			<div class="headings">
+				<h1>Event Title</h1>
+				<h1>Event Status</h1>
+				<h1>Actions</h1>
+			</div>
+			<div class="event">
+				<div class="event-title">
+					<h1>Going Back to School</h1>
+				</div>
+				
+				<div class="event-status">
+					<h1 class="badge badge-warning">Running</h1>
+				</div>
+				<div class="actions">
+					<button class="btn" type="button" title="Edit"><span class="icon icon-edit far fa-edit"></span></button>
+					<button class="btn" type="button" title="Delete"><span class=" icon icon-del far fa-trash-alt"></span></button>
+				</div>
+				
+			</div>
+		</div>
+	</body>
+</html>

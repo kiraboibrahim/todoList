@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>
+				TO DO LIST
+		</title>
+		
+		<script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+		<link rel="stylesheet" href="js/bootstrap-4.3.1-dist/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+		<style>
+			@font-face {
+				src: url(fonts/Comic_Nueue/ComicNeue-Regular.ttf);
+				font-size: 100%;
+				font-family: Comic;
+			}
+			@font-face {
+				src: url(fonts/Baloo_Tammudu_2/BalooTammudu2-Regular.ttf);
+				font-size: 100%;
+				font-family: Baloo;
+			}
+			body {
+				width: 100vw;
+				height: 100vh;
+				font-size: 100%;
+				font-family: Baloo, sans-serif;
+			}
+			.container-par {
+				width: 100%;
+				height: 100%;
+				padding-left: 2em;
+				padding-right: 2em;
+				display: flex;
+				flex-direction: column;
+			}
+			
+			.tool-bar {
+				flex: 0 0 10%;
+				display: flex;
+				padding-top: 1em;
+			}
+			.tool-bar h1 {
+				font-size: 15px;
+				color: #ececec;
+				padding: 1em;
+				border-radius: 20px;
+				font-weight: bold;
+			}
+			.tool-bar div {
+				margin-right: 2em;
+				
+			}
+		
+			.tool-bar div h1:hover {
+				cursor: pointer;
+			}
+			.main {
+				flex: 1 0 auto;
+				border: 1px solid #ececec;
+				border-radius: 5px;
+			}
+			#add {
+				padding: 1em;
+				padding-left: 2em;
+				width: 80%;
+			}
+			#add h1 {
+				font-size: 25px;
+				margin-bottom: 2em;
+				color: #222831;
+
+			}
+			input {
+				width: 100%;
+				padding: 1em;
+				border-radius: 50px;
+				border: 1px solid #dcdcdc;
+				margin-bottom: 1em;
+				font-size: 15px;
+				letter-spacing: 1px;
+			}
+			
+			input[type=submit] {
+				float: right;
+				padding: .5em;
+				font-size: 19px;
+				color: white;
+			}
+			textarea {
+				width: 100%;
+				padding: 1em;
+				font-size: 16px;
+				border: 1px solid #dcdcdc;
+				border-radius: 5px;
+			}
+			
+			label  {
+				padding-left: .4em;
+				font-weight: bold;
+				margin-bottom: .8em;
+				color: #222831;
+			}
+			input, label {
+				display: block;
+			}
+			
+			.active-btn {
+				color: black !important;
+				background-color: white !important;
+				border: 1px solid #dcdcdc !important;
+			}
+		</style>
+		<script>
+			$(document).ready(function () {
+				$(".tool-bar h1").click(function () {
+					$("h1.active-btn").removeClass("active-btn");
+					$(this).addClass("active-btn");
+				}); //end click
+			}); //end ready
+		</script>
+	</head>
+	<body>
+		
+		<div class ="container-par">
+			<div class="tool-bar">
+				<div class="add" data-target="#add">
+					<h1 class="active-btn btn btn-primary">ADD</h1>
+				</div>
+				<div class="edit" data-target="#edit">
+					<h1 class="btn btn-primary">EDIT</h1>
+				</div>
+				<div class="events" data-target="#events">
+					<h1 class="btn btn-primary">EVENTS</h1>
+				</div>
+			</div>
+			<div class="main">
+				<div id="add">
+					<h1>Create your event</h1>
+					<form class="event-form" action="#" method="post">
+
+						<label for="evet-title">Event Title: </label>
+						<input type="text" name="title" placeholder="Event title">  
+					
+					
+					
+						<label for="start-date">Start Date: </label>
+						<input type="date" name="start-date" required >
+					
+					
+					
+						<label for="end-date">End Date: </label>
+						<input type="date" name="end-date" required>
+					
+					
+					
+						<label for="event-desc">Event Description: </label>
+						<textarea name="event-desc" placeholder="Write something about your event" rows="20" cols="20" required></textarea>
+						
+						<input class="btn btn-warning" name="submit" type="submit" value="CREATE TASK">
+					</form>
+				</div>
+				
+				<div class="edit">
+				
+				</div>
+				
+				<div id="events">
+				
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
